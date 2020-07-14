@@ -21,7 +21,7 @@ var chartGroup = svg.append("g")
 
 //d3.csv("data.csv", function(err, censusRecord){
 // if(err) throw err;
-d3.csv("data.csv").then(function(censusRecord){
+d3.csv("./data.csv").then(function(censusRecord){
     censusRecord.forEach(function(record){
         record.smokes = +record.smokes;
         record.age = +record.age;
