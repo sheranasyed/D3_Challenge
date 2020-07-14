@@ -19,8 +19,9 @@ var svg = d3.select("#scatter")
 var chartGroup = svg.append("g")
     .attr("transform",`translate(${margin.left},${margin.top})`);
 
-d3.csv("data.csv", function(err, censusRecord){
-    if(err) throw err;
+//d3.csv("data.csv", function(err, censusRecord){
+// if(err) throw err;
+d3.csv("data.csv").then(function(censusRecord){
     censusRecord.forEach(function(record){
         record.smokes = +record.smokes;
         record.age = +record.age;
